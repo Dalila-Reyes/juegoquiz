@@ -1,0 +1,15 @@
+/* Gif.css */
+
+.gif-container {
+  display: flex; /* Usar Flexbox para centrar el contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  margin: 1rem; /* Espacio alrededor del contenedor */
+}
+
+.gif-image {
+  max-width:30%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  height: auto; /* Mantiene la relación de aspecto */
+  border-radius: 8px; /* Bordes redondeados para una apariencia más suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Sombra suave para darle profundidad */
+}

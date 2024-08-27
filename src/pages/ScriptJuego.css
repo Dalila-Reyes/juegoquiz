@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  overflow: hidden; /* Evita barras de desplazamiento */
+}
+
+#gameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura total de la ventana */
+  background-color: #000; /* Fondo opcional */
+}

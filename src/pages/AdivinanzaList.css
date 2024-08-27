@@ -1,0 +1,16 @@
+/* AdivinanzaList.css */
+
+.adivinanza-list {
+    display: flex; /* Usar flexbox para organizar los elementos */
+    flex-direction: column; /* Colocar los elementos en columna */
+    align-items: center; /* Centrar los elementos */
+    padding: 1rem; /* Espaciado interno */
+    background-color: #e9ecef; /* Fondo suave para la lista */
+  }
+  
+  .adivinanza-item {
+    width: 100%; /* Hacer que cada item ocupe el ancho completo */
+    max-width: 600px; /* Ancho máximo para evitar que sea muy ancho en pantallas grandes */
+    margin: 1rem 0; /* Margen vertical entre los items */
+  }
+  

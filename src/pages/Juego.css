@@ -1,0 +1,32 @@
+/* Juego.css */
+
+.juego-container {
+  display: flex; /* Usar Flexbox para centrar el contenido */
+  flex-direction: column; /* Organizar elementos en columna */
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  height: 100vh; /* Ocupa toda la altura de la vista */
+  padding: 2rem; /* Espacio alrededor del contenedor */
+  text-align: center; /* Centrar el texto */
+  background-color: #0e0505; /* Fondo suave */
+}
+
+.jugar-button {
+  padding: 3rem 5rem; /* Espaciado interno del botón */
+  font-size: 3.2rem; /* Tamaño de fuente más grande */
+  color: rgb(255, 255, 255); /* Color del texto */
+  background-color: #3681d1; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s; /* Transición suave al cambiar el color */
+}
+
+.jugar-button:hover {
+  background-color: #0faf00; /* Color de fondo al pasar el mouse */
+}
+
+h1 {
+  font-size: 2rem; /* Tamaño de fuente para el encabezado */
+  margin-bottom: 1.5rem; /* Espacio debajo del encabezado */
+}

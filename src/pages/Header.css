@@ -1,0 +1,66 @@
+/* Header.css */
+
+.header {
+  background-color: #282a2c; /* Color de fondo */
+  color: rgb(255, 255, 255); /* Color del texto */
+  padding: 1rem; /* Espaciado interno */
+  text-align: center; /* Centrar el texto */
+}
+
+h1 {
+  color: white;
+  font-size: 3.5rem; /* Tamaño de fuente del título */
+  margin: 0; /* Sin margen */
+}
+
+nav {
+  margin-top: 1rem; /* Espaciado superior del nav */
+}
+
+ul {
+  list-style: none; /* Sin viñetas */
+  padding: 0; /* Sin espaciado interno */
+  display: flex; /* Usar flexbox para los enlaces */
+  justify-content: center; /* Centrar los enlaces horizontalmente */
+  gap: 5rem; /* Espaciado entre enlaces */
+}
+
+li {
+  font-size: 1.2rem; /* Tamaño de fuente de los enlaces */
+}
+
+a {
+  color: white; /* Color de los enlaces */
+  text-decoration: none; /* Sin subrayado */
+  transition: color 0.3s; /* Transición suave para el color */
+}
+
+a:hover {
+  color: #d1d1d1; /* Color de los enlaces al pasar el mouse */
+}
+
+/* Media Queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Tamaño más pequeño para pantallas pequeñas */
+  }
+
+  ul {
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    gap: 1rem; /* Menos espaciado entre enlaces */
+  }
+
+  li {
+    font-size: 1.5rem; /* Tamaño de fuente más grande */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; /* Tamaño aún más pequeño */
+  }
+
+  li {
+    font-size: 1.2rem; /* Tamaño de fuente más pequeño */
+  }
+}

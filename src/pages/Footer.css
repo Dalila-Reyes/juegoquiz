@@ -1,0 +1,16 @@
+/* Footer.css */
+
+.footer {
+  background-color: #343a40; /* Color de fondo oscuro */
+  color: white; /* Texto blanco para contraste */
+  text-align: center; /* Centrar el texto */
+  padding: 1rem; /* Espaciado interno */
+  position: relative; /* Posicionamiento relativo para que se mantenga en el lugar correcto */
+  bottom: 0; /* Alinear al fondo de la página */
+  width: 100%; /* Asegurarse de que ocupe el 100% del ancho */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave para destacar el footer */
+}
+
+.footer p {
+  margin: 0; /* Eliminar márgenes predeterminados para el párrafo */
+}
