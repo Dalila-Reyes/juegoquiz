@@ -1,0 +1,79 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(20, 30px);
+  grid-template-rows: repeat(20, 30px);
+  border: 5px solid #000; /* Borde alrededor del área de juego */
+  margin: 20px; /* Espacio alrededor del área de juego */
+}
+
+.row {
+  display: contents; /* Permite que las celdas se alineen correctamente */
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc; /* Bordes para cada celda */
+}
+
+.snake {
+  background-color: rgb(5, 64, 153); /* Color de la serpiente */
+}
+
+.food {
+  background-color: red; /* Color de la comida */
+  animation: blink 0.8s infinite; /* Efecto de parpadeo */
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.game-over {
+  text-align: center;
+  
+  margin-top: 100px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.control-row {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.control-button {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  background-color: #16a2f3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control-button:active {
+  background-color: #0056b3;
+  transform: scale(0.95);
+}

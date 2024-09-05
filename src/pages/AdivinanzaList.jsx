@@ -122,48 +122,20 @@ const adivinanzas = [
     id: 24, 
     pregunta: "Tiene yemas y no es huevo, tiene copa y no es sombrero, tiene hojas y no es libro.", 
     respuesta: "El árbol."
-  }, 
-  { 
-    id: 25, 
-    pregunta: "En las manos de mujeres siempre está metido, a veces estirado, a veces recogido.", 
-    respuesta: "El abanico."
-  }, 
-  { 
-    id: 26, 
-    pregunta: "Es puerto y no de mar, es rico, sin capital.", 
-    respuesta: "Puerto Rico."
-  }, 
-  { 
-    id: 27, 
-    pregunta: "Sube y llena y baja vacía, si no se da prisa la sopa se enfría.", 
-    respuesta: "La cuchara."
-  }, 
-  { 
-    id: 28, 
-    pregunta: "Dos hermanas diligentes que caminan al compás, con el pico por delante y los ojos por detrás.", 
-    respuesta: "Las tijeras."
-  }, 
-  { 
-    id: 29, 
-    pregunta: "¿Quién es el hijo de mi madre que no es mi hermano?", 
-    respuesta: "Yo."
-  }, 
-  { 
-    id: 30, 
-    pregunta: "Cien amigos tengo, todos en una tabla. Si yo no los toco ellos no me hablan.", 
-    respuesta: "El piano."
-  }
-  
+    
+  },
+ 
 ];
 
 function AdivinanzaList() {
   return (
-    <div className="adivinanza-list">
-      {adivinanzas.map((adivinanza) => (
-        <AdivinanzaItem key={adivinanza.id} adivinanza={adivinanza} />
-      ))}
-    </div>
+      <div className="container adivinanza-list mt-4">
+          {adivinanzas.map((adivinanza) => (
+              <AdivinanzaItem key={adivinanza.id} adivinanza={adivinanza} />
+          ))}
+      </div>
   );
 }
+
 
 export default AdivinanzaList;

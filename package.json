@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https:/Dalila-Reyes.github.io/juegoquiz",
+  "homepage": "https://dalila-reyes.github.io/juegoquiz",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,10 +13,17 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "nipplejs": "^0.10.2",
     "phaser": "^3.80.1",
+    "phaser3-rex-plugins": "^1.80.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.1"
+    "react-joystick-component": "^6.2.1",
+    "react-native-gesture-handler": "^2.19.0",
+    "react-router-dom": "^6.26.1",
+    "sass": "^1.77.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

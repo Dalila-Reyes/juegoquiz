@@ -8,13 +8,13 @@
   height: 100vh; /* Ocupa toda la altura de la vista */
   padding: 2rem; /* Espacio alrededor del contenedor */
   text-align: center; /* Centrar el texto */
-  background-color: #0e0505; /* Fondo suave */
+  background-color: #ffffff; /* Fondo suave */
 }
 
 .jugar-button {
-  padding: 3rem 5rem; /* Espaciado interno del botón */
-  font-size: 3.2rem; /* Tamaño de fuente más grande */
-  color: rgb(255, 255, 255); /* Color del texto */
+  padding: 1rem 3rem; /* Espaciado interno del botón */
+  font-size: 1.5rem; /* Tamaño de fuente más grande */
+  color: #fff; /* Color del texto */
   background-color: #3681d1; /* Color de fondo del botón */
   border: none; /* Sin borde */
   border-radius: 5px; /* Bordes redondeados */
@@ -27,6 +27,30 @@
 }
 
 h1 {
-  font-size: 2rem; /* Tamaño de fuente para el encabezado */
+  font-size: 2.5rem; /* Tamaño de fuente para el encabezado */
   margin-bottom: 1.5rem; /* Espacio debajo del encabezado */
+  color: #fff; /* Color del texto del encabezado */
+}
+
+/* Media Queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+  .jugar-button {
+    padding: 1rem 2rem; /* Reducir el espaciado interno del botón */
+    font-size: 1.25rem; /* Tamaño de fuente más pequeño */
+  }
+
+  h1 {
+    font-size: 2rem; /* Tamaño de fuente más pequeño para el encabezado */
+  }
+}
+
+@media (max-width: 480px) {
+  .jugar-button {
+    padding: 0.5rem 1.5rem; /* Ajustar el espaciado interno para pantallas más pequeñas */
+    font-size: 1rem; /* Tamaño de fuente aún más pequeño */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Tamaño de fuente aún más pequeño para el encabezado */
+  }
 }

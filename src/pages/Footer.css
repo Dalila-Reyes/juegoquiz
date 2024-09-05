@@ -1,16 +1,31 @@
 /* Footer.css */
-
-.footer {
-  background-color: #343a40; /* Color de fondo oscuro */
-  color: white; /* Texto blanco para contraste */
-  text-align: center; /* Centrar el texto */
-  padding: 1rem; /* Espaciado interno */
-  position: relative; /* Posicionamiento relativo para que se mantenga en el lugar correcto */
-  bottom: 0; /* Alinear al fondo de la página */
-  width: 100%; /* Asegurarse de que ocupe el 100% del ancho */
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave para destacar el footer */
+html, body {
+  height: 100%; /* Asegura que el body ocupe el 100% de la altura */
+  margin: 0; /* Sin márgenes */
 }
 
-.footer p {
-  margin: 0; /* Eliminar márgenes predeterminados para el párrafo */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Hace que el contenedor principal ocupe al menos toda la altura de la ventana */
+}
+
+.footer {
+  margin-top: auto; /* Asegura que el footer se empuje hacia abajo */
+  position: relative; /* Para evitar problemas de posicionamiento */
+}
+
+.footer a {
+  transition: color 0.3s; /* Transición suave para el color de los enlaces */
+}
+
+.footer a:hover {
+  color: #ff5722; /* Cambia el color de los enlaces al pasar el mouse */
+}
+
+/* Media Queries para ajustar el tamaño del texto en móviles */
+@media (max-width: 768px) {
+  .footer p {
+    font-size: 0.9rem; /* Tamaño del texto en móviles */
+  }
 }

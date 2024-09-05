@@ -1,8 +1,6 @@
-// src/Quiz.jsx
+// src/QuizMatematicas.jsx
 import React, { useState } from 'react';
 import './QuizGeneral.css';
-
-
 
 // Base de datos local de preguntas
 const bd_matematicas = [
@@ -50,80 +48,75 @@ const bd_matematicas = [
 
 const Pregunta = ({ pregunta, respuestas, seleccionar, resultados }) => (
     <div className={`contenedor-pregunta ${resultados.find(r => r.id === pregunta.id)?.estado}`}>
-      <h2>{`${pregunta.id + 1} - ${pregunta.pregunta}`}</h2>
-      <div>
-        {[pregunta.op0, pregunta.op1, pregunta.op2].map((op, j) => (
-          <label
-            key={j}
-            className={`opcion ${
-              resultados.find(r => r.id === pregunta.id && r.seleccionada === j)?.estado
-            }`}
-          >
-            <input
-              type="radio"
-              name={`p${pregunta.id}`}
-              checked={respuestas[pregunta.id] === j}
-              onChange={() => seleccionar(pregunta.id, j)}
-            />
-            <span>{op}</span>
-            {resultados.find(r => r.id === pregunta.id && r.correcta === j) && <span>✔️</span>}
-            {resultados.find(r => r.id === pregunta.id && r.seleccionada === j && r.seleccionada !== r.correcta) && <span>❌</span>}
-          </label>
-        ))}
-      </div>
+        <h2>{`${pregunta.id + 1} - ${pregunta.pregunta}`}</h2>
+        <div className="opciones">
+            {[pregunta.op0, pregunta.op1, pregunta.op2].map((op, j) => (
+                <label key={j} className={`opcion ${resultados.find(r => r.id === pregunta.id && r.seleccionada === j)?.estado}`}>
+                    <input
+                        type="radio"
+                        name={`p${pregunta.id}`}
+                        checked={respuestas[pregunta.id] === j}
+                        onChange={() => seleccionar(pregunta.id, j)}
+                    />
+                    <span className="texto-opcion">{op}</span>
+                    {resultados.find(r => r.id === pregunta.id && r.correcta === j) && <span>✔️</span>}
+                    {resultados.find(r => r.id === pregunta.id && r.seleccionada === j && r.seleccionada !== r.correcta) && <span>❌</span>}
+                </label>
+            ))}
+        </div>
     </div>
-  );
-  
-  function QuizMatematicas() {
+);
+
+function QuizMatematicas() {
     const [respuestas, setRespuestas] = useState([]);
     const [resultados, setResultados] = useState([]);
     const [cantiCorrectas, setCantiCorrectas] = useState(0);
-  
+
     const seleccionar = (pos, opElegida) => {
-      setRespuestas(prevRespuestas => {
-        const nuevasRespuestas = [...prevRespuestas];
-        nuevasRespuestas[pos] = opElegida;
-        return nuevasRespuestas;
-      });
+        setRespuestas(prevRespuestas => {
+            const nuevasRespuestas = [...prevRespuestas];
+            nuevasRespuestas[pos] = opElegida;
+            return nuevasRespuestas;
+        });
     };
-  
+
     const corregir = () => {
-      let correctas = 0;
-      const nuevosResultados = bd_matematicas.map((pregunta, i) => {
-        if (pregunta.correcta === respuestas[i]?.toString()) {
-          correctas++;
-          return { id: pregunta.id, estado: 'correcta', correcta: pregunta.correcta };
-        } else {
-          return { id: pregunta.id, estado: 'incorrecta', seleccionada: respuestas[i], correcta: pregunta.correcta };
-        }
-      });
-      setResultados(nuevosResultados);
-      setCantiCorrectas(correctas);
-      window.scrollTo(0, 0);
+        let correctas = 0;
+        const nuevosResultados = bd_matematicas.map((pregunta, i) => {
+            if (pregunta.correcta === respuestas[i]?.toString()) {
+                correctas++;
+                return { id: pregunta.id, estado: 'correcta', correcta: pregunta.correcta };
+            } else {
+                return { id: pregunta.id, estado: 'incorrecta', seleccionada: respuestas[i], correcta: pregunta.correcta };
+            }
+        });
+        setResultados(nuevosResultados);
+        setCantiCorrectas(correctas);
+        window.scrollTo(0, 0);
     };
-  
+
     return (
-      <div>
-        
-        <section id="juego">
-          {bd_matematicas.map(pregunta => (
-            <Pregunta
-              key={pregunta.id}
-              pregunta={pregunta}
-              respuestas={respuestas}
-              seleccionar={seleccionar}
-              resultados={resultados}
-            />
-          ))}
-        </section>
-        <button onClick={corregir}>Corregir</button>
-        {cantiCorrectas !== 0 && (
-          <h2 className="resultado">
-            {cantiCorrectas} CORRECTAS - {bd_matematicas.length - cantiCorrectas} INCORRECTAS
-          </h2>
-        )}
-      </div>
+        <div className="contenedor-quiz">
+            <h1>Cuestionario de Matemáticas</h1>
+            <section id="juego" className="scroll-container">
+                {bd_matematicas.map(pregunta => (
+                    <Pregunta
+                        key={pregunta.id}
+                        pregunta={pregunta}
+                        respuestas={respuestas}
+                        seleccionar={seleccionar}
+                        resultados={resultados}
+                    />
+                ))}
+                <button className="boton-corregir" onClick={corregir}>Corregir</button>
+            </section>
+            {cantiCorrectas !== 0 && (
+                <h2 className="resultado">
+                    {cantiCorrectas} CORRECTAS - {bd_matematicas.length - cantiCorrectas} INCORRECTAS
+                </h2>
+            )}
+        </div>
     );
-  }
-  
-  export default QuizMatematicas;
+}
+
+export default QuizMatematicas;

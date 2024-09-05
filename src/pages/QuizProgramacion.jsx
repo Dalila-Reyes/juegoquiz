@@ -2,8 +2,6 @@
 import React, { useState } from 'react';
 import './QuizGeneral.css';
 
-
-
 // Base de datos local de preguntas
 const bd_programacion = [
     {
@@ -51,20 +49,16 @@ const bd_programacion = [
 const Pregunta = ({ pregunta, respuestas, seleccionar, resultados }) => (
     <div className={`contenedor-pregunta ${resultados.find(r => r.id === pregunta.id)?.estado}`}>
         <h2>{`${pregunta.id + 1} - ${pregunta.pregunta}`}</h2>
-        <div>
+        <div className="opciones">
             {[pregunta.op0, pregunta.op1, pregunta.op2].map((op, j) => (
-                <label
-                    key={j}
-                    className={`opcion ${resultados.find(r => r.id === pregunta.id && r.seleccionada === j)?.estado
-                        }`}
-                >
+                <label key={j} className={`opcion ${resultados.find(r => r.id === pregunta.id && r.seleccionada === j)?.estado}`}>
                     <input
                         type="radio"
                         name={`p${pregunta.id}`}
                         checked={respuestas[pregunta.id] === j}
                         onChange={() => seleccionar(pregunta.id, j)}
                     />
-                    <span>{op}</span>
+                    <span className="texto-opcion">{op}</span>
                     {resultados.find(r => r.id === pregunta.id && r.correcta === j) && <span>✔️</span>}
                     {resultados.find(r => r.id === pregunta.id && r.seleccionada === j && r.seleccionada !== r.correcta) && <span>❌</span>}
                 </label>
@@ -102,9 +96,9 @@ function QuizProgramacion() {
     };
 
     return (
-        <div>
-            
-            <section id="juego">
+        <div className="contenedor-quiz">
+            <h1>Cuestionario de Programación</h1>
+            <section id="juego" className="scroll-container">
                 {bd_programacion.map(pregunta => (
                     <Pregunta
                         key={pregunta.id}
@@ -114,8 +108,8 @@ function QuizProgramacion() {
                         resultados={resultados}
                     />
                 ))}
+                <button className="boton-corregir" onClick={corregir}>Corregir</button>
             </section>
-            <button onClick={corregir}>Corregir</button>
             {cantiCorrectas !== 0 && (
                 <h2 className="resultado">
                     {cantiCorrectas} CORRECTAS - {bd_programacion.length - cantiCorrectas} INCORRECTAS

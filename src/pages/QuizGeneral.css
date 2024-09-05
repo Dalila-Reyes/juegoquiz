@@ -1,71 +1,51 @@
-/* Quiz.css */
-
+/* QuizGeneral.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000000; /* Color de fondo suave */
-    margin: 0; /* Eliminar márgenes predeterminados */
-    padding: 20px; /* Espacio alrededor del contenido */
-  }
-  
-  h1 {
-    text-align: center; /* Centrar el título */
-    color: #0a0101; /* Color del texto */
-  }
-  
-  #juego {
-    max-width: 600px; /* Ancho máximo para el contenedor de preguntas */
-    margin: 0 auto; /* Centrar horizontalmente */
-    background: rgb(235, 235, 235); /* Fondo blanco para el contenedor */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
-    padding: 20px; /* Espacio interno */
-  }
-  
-  .contenedor-pregunta {
-    margin-bottom: 40px; /* Espacio entre preguntas */
-  }
-  
-  .opcion {
-    display: block; /* Hacer que cada opción ocupe toda la línea */
-    padding: 10px; /* Espacio interno */
-    border: 1px solid #070707; /* Borde para las opciones */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambiar cursor al pasar por encima */
-    transition: background-color 0.3s; /* Transición suave para el hover */
-  }
-  
-  .opcion:hover {
-    background-color: #f1f1f1; /* Color de fondo al pasar el ratón */
-  }
-  
-  .correcta {
-    background-color: #d4edda; /* Color de fondo para respuestas correctas */
-  }
-  
-  .incorrecta {
-    background-color: #f8d7da; /* Color de fondo para respuestas incorrectas */
-  }
-  
-  .resultado {
-    text-align: center; /* Centrar el resultado */
-    font-size: 1.5rem; /* Tamaño de fuente más grande */
-    margin-top: 20px; /* Espacio encima del resultado */
-  }
-  
-  button {
-    display: block; /* Botón centrado */
-    margin: 20px auto; /* Espacio arriba y abajo, centrar */
-    padding: 10px 20px; /* Espacio interno del botón */
-    font-size: 1.2rem; /* Tamaño de fuente */
-    color: rgb(14, 11, 11); /* Color del texto */
-    background-color: #007bff; /* Color de fondo del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    transition: background-color 0.3s; /* Transición suave al cambiar el color */
-  }
-  
-  button:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el mouse */
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Cambia la fuente según tu preferencia */
+}
+
+.contenedor-quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /* Espaciado alrededor del contenedor */
+  height: 100vh; /* Usa toda la altura de la ventana */
+  overflow: hidden; /* Oculta el desbordamiento externo */
+}
+
+.scroll-container {
+  max-height: calc(100vh - 150px); /* Ajusta según el espacio necesario para el título */
+  overflow-y: auto; /* Habilita el desplazamiento vertical */
+  width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+  padding: 10px; /* Espaciado interno */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar el contenedor */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.boton-corregir {
+  margin-top: 20px; /* Espaciado entre el contenedor y el botón */
+  padding: 10px 20px; /* Espaciado dentro del botón */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  width: 100%; /* Asegura que el botón ocupe todo el ancho */
+}
+
+.resultado {
+  margin-top: 20px; /* Espaciado entre el botón y el resultado */
+  font-size: 18px; /* Tamaño de fuente */
+}
+
+/* Opciones y etiquetas */
+.opciones {
+  margin-top: 10px; /* Espaciado superior para las opciones */
+}
+
+.opcion {
+  display: block; /* Asegura que cada opción ocupe una línea completa */
+  margin-bottom: 10px; /* Espaciado entre las opciones */
+}
+
+.texto-opcion {
+  margin-left: 8px; /* Espacio entre el input y el texto de la opción */
+}

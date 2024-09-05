@@ -2,11 +2,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import './App.css'; // Importa tus estilos aquí
 
-import './App.CSS'; // Importa tus estilos aquí
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
+

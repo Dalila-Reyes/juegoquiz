@@ -1,80 +1,79 @@
 /* AdivinanzaItem.css */
 
 .adivinanza-item {
-    background-color: #f8f9fa; /* Fondo claro */
-    border: 1px solid #ced4da; /* Borde suave */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 1rem; /* Espaciado interno */
-    margin: 1rem; /* Margen externo */
-    text-align: center; /* Centrar el texto */
-    transition: box-shadow 0.3s; /* Transición suave para sombra */
-  }
-  
-  .adivinanza-item:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra al pasar el mouse */
-  }
-  
-  .question-mark-image {
-    width: 50px; /* Ancho fijo para la imagen */
-    height: auto; /* Mantener la proporción de la imagen */
-    margin-bottom: 1rem; /* Espaciado inferior de la imagen */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  }
-  
-  button {
-    background-color: #007bff; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 0.5rem 1rem; /* Espaciado interno del botón */
-    cursor: pointer; /* Cambiar cursor al pasar */
-    transition: background-color 0.3s; /* Transición suave para el color de fondo */
-  }
-  
-  button:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el mouse */
-  }
-  
-  .respuesta {
-    margin-top: 1rem; /* Espaciado superior de la respuesta */
-    font-weight: bold; /* Texto en negrita */
-  }
-  
-  /* Media Queries para dispositivos más pequeños */
-  @media (max-width: 768px) {
-    .adivinanza-item {
+  background-color: #f8f9fa; /* Fondo claro */
+  border: 1px solid #ced4da; /* Borde suave */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 1rem; /* Espaciado interno */
+  margin: 1rem; /* Margen externo */
+  text-align: center; /* Centrar el texto */
+  transition: box-shadow 0.3s; /* Transición suave para sombra */
+}
+
+.adivinanza-item:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra al pasar el mouse */
+}
+
+.question-mark-image {
+  width: 50px; /* Ancho fijo para la imagen */
+  height: auto; /* Mantener la proporción de la imagen */
+  margin-bottom: 1rem; /* Espaciado inferior de la imagen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+button {
+  background-color: #007bff; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 0.5rem 1rem; /* Espaciado interno del botón */
+  cursor: pointer; /* Cambiar cursor al pasar */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+button:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+.respuesta {
+  margin-top: 1rem; /* Espaciado superior de la respuesta */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Media Queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+  .adivinanza-item {
       margin: 0.5rem; /* Menos margen en pantallas pequeñas */
       padding: 0.5rem; /* Menos espaciado interno */
-    }
-  
-    .question-mark-image {
+  }
+
+  .question-mark-image {
       width: 40px; /* Reducir el tamaño de la imagen */
-    }
-  
-    button {
+  }
+
+  button {
       padding: 0.4rem 0.8rem; /* Ajustar el espaciado del botón */
-    }
-  
-    .respuesta {
+  }
+
+  .respuesta {
       font-size: 0.9rem; /* Tamaño de fuente más pequeño */
-    }
   }
-  
-  @media (max-width: 480px) {
-    .adivinanza-item {
+}
+
+@media (max-width: 480px) {
+  .adivinanza-item {
       padding: 0.2rem; /* Aún menos espaciado interno */
-    }
-  
-    .question-mark-image {
-      width: 30px; /* Tamaño aún más pequeño para la imagen */
-    }
-  
-    button {
-      padding: 0.3rem 0.6rem; /* Ajustar el espaciado del botón */
-    }
-  
-    .respuesta {
-      font-size: 0.8rem; /* Tamaño de fuente aún más pequeño */
-    }
   }
-  
+
+  .question-mark-image {
+      width: 30px; /* Tamaño aún más pequeño para la imagen */
+  }
+
+  button {
+      padding: 0.3rem 0.6rem; /* Ajustar el espaciado del botón */
+  }
+
+  .respuesta {
+      font-size: 0.8rem; /* Tamaño de fuente aún más pequeño */
+  }
+}

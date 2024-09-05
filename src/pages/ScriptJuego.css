@@ -1,6 +1,8 @@
+/* Estilos generales */
 body {
   margin: 0;
-  overflow: hidden; /* Evita barras de desplazamiento */
+  overflow: hidden; /* Evita barras de desplazamiento en el cuerpo */
+  font-family: Arial, sans-serif; /* Tipografía general */
 }
 
 #gameContainer {
@@ -8,5 +10,89 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh; /* Altura total de la ventana */
-  background-color: #000; /* Fondo opcional */
+  width: 100%; /* Asegura que ocupe el ancho completo */
+  background-color: #000; /* Fondo del contenedor */
+  transition: background-color 0.5s; /* Transición suave para cambios de fondo */
+}
+:root {
+  --color-fondo: rgb(235, 235, 235);
+  --color-borde: #070707;
+  --color-hover: #f1f1f1;
+}
+
+.scroll-container {
+  background: var(--color-fondo);
+}
+
+.opcion {
+  border: 1px solid var(--color-borde);
+}
+
+.opcion:hover {
+  background-color: var(--color-hover);
+}
+
+
+/* Contenedor de desplazamiento */
+.scroll-container {
+  max-width: 600px; /* Ancho máximo del contenedor */
+  width: 90%; /* Ocupa un 90% del ancho en pantallas pequeñas */
+  max-height: 80vh; /* Altura máxima del contenedor (80% de la ventana) */
+  overflow-y: auto; /* Permitir desplazamiento vertical */
+  background: rgb(235, 235, 235); /* Fondo claro para el contenedor */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+  padding: 20px; /* Espacio interno */
+  margin: 0 auto; /* Centrar en la pantalla */
+}
+
+
+/* Estilos para preguntas y opciones */
+.contenedor-pregunta {
+  margin-bottom: 40px; /* Espacio entre preguntas */
+}
+
+
+.opcion {
+  display: block; /* Cada opción ocupa toda la línea */
+  padding: 10px; /* Espacio interno */
+  border: 1px solid #070707; /* Borde para las opciones */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar cursor al pasar por encima */
+  transition: background-color 0.3s; /* Transición suave para el hover */
+}
+#joystickContainer {
+  position: absolute;
+  bottom: 20px; /* Ajusta según necesites */
+  left: 20px; /* Ajusta según necesites */
+  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+  width: 80px; /* Ajusta el ancho del joystick */
+  height: 80px; /* Ajusta la altura del joystick */
+}
+
+
+.opcion:hover {
+  background-color: #f1f1f1; /* Color de fondo al pasar el ratón */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  #gameContainer {
+    padding: 1rem; /* Agregar espaciado en pantallas más pequeñas */
+  }
+
+  .scroll-container {
+    padding: 10px; /* Ajustar espaciado interno en pantallas más pequeñas */
+    max-height: 70vh; /* Altura máxima del contenedor en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  #gameContainer {
+    flex-direction: column; /* Cambiar a columna en pantallas muy pequeñas */
+  }
+
+  .opcion {
+    padding: 8px; /* Menos espaciado interno para opciones */
+  }
 }

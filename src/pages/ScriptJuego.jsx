@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Phaser from 'phaser';
+
 import './ScriptJuego.css';
 
 const ScriptJuego = () => {
